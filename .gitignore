@@ -1,0 +1,36 @@
+# Secrets
+secrets.yaml
+*.secret.yaml
+.env
+.env.*
+
+# ESPHome / PlatformIO build output
+.esphome/
+.pio/
+.platformio/
+build/
+dist/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Firmware and compiled objects
+*.bin
+*.elf
+*.map
+*.o
+*.a
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary verification files
+*.tmp
+*.log

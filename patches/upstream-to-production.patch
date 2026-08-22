@@ -1,0 +1,43 @@
+diff --git a/components/ac_hi/ac_hi.cpp b/components/ac_hi/ac_hi.cpp
+index b3d002d..9d762cf 100644
+--- a/components/ac_hi/ac_hi.cpp
++++ b/components/ac_hi/ac_hi.cpp
+@@ -1008,10 +1008,10 @@ void ACHIClimate::queue_retry_fields_from_state_() {
+ // ---- Send status query ----
+ void ACHIClimate::send_query_status_() {
+   ESP_LOGD(TAG, "Sending status query (0x66/subtype 0x00)");
+-  send_logical_frame_(query_, "TX status query 0x66/0x00");
+   status_query_in_flight_ = true;
+   status_query_time_ = millis();
+   query_kind_ = QUERY_STATUS;
++  send_logical_frame_(query_, "TX status query 0x66/0x00");
+ }
+ 
+ void ACHIClimate::send_query_capabilities_() {
+@@ -1560,6 +1560,17 @@ void ACHIClimate::handle_frame_(const std::vector<uint8_t> &b) {
+     ESP_LOGD(TAG, "Frame too short (%u), ignored", (unsigned) b.size());
+     return;
+   }
++
++  // Automatic-direction MAX485 bridges can feed the transmitted request back
++  // into RO. Hisense requests use byte[2] == 0, while appliance responses use
++  // byte[2] == 1 (the original BSAGI legacy implementation enforced this).
++  // Never treat a local TX echo as a status response or write ACK.
++  if (b[2] != 0x01) {
++    ESP_LOGV(TAG, "Ignoring local/request echo: direction=0x%02X cmd=0x%02X len=%u",
++             b[2], b[IDX_CMD], (unsigned) b.size());
++    return;
++  }
++
+   uint8_t cmd = b[IDX_CMD];
+   if (cmd == 102) {          // 0x66 – status or ProductType response
+     status_query_in_flight_ = false;
+@@ -1573,7 +1584,7 @@ void ACHIClimate::handle_frame_(const std::vector<uint8_t> &b) {
+   } else if (cmd == 101) {   // 0x65 – write acknowledge
+     handle_ack_101_();
+   } else {
+-    ESP_LOGV(TAG, "Unknown command 0x%02X, ignored", cmd);
++    ESP_LOGV(TAG, "Unknown response command 0x%02X, ignored", cmd);
+   }
+ }
+ 

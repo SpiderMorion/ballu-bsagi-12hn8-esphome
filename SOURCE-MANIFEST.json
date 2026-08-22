@@ -1,0 +1,129 @@
+{
+  "project": "ballu-bsagi-12hn8-esphome",
+  "visibility": "private",
+  "upstream_url": "https://github.com/Druidblack/AC-Hisense",
+  "upstream_commit": "424f65aba9db997fc48bb37f377bc9a72507a8f7",
+  "esphome": "2026.6.5",
+  "files": [
+    {
+      "path": ".github/workflows/build.yml",
+      "size": 1043,
+      "sha256": "38feface5a4a41106c9379b223bcb9ab9a19c4a94c00b797bb8f309d08d121d9"
+    },
+    {
+      "path": ".gitignore",
+      "size": 344,
+      "sha256": "de88b38ceee39fbfb63c6d7e4817d4d888e5207eeb9a272414b402f42b295f9d"
+    },
+    {
+      "path": "AC-Hisense/UPSTREAM-README.md",
+      "size": 13111,
+      "sha256": "59082c7bdbb18b161fc2d744dab19900c724ce0884ab7db276e51df6a2f914d8"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/ac_hi.cpp",
+      "size": 122931,
+      "sha256": "a7ad5ed4b10066c862f9df062983502b3d739cce5fa1f1330d446203272a046d"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/ac_hi.h",
+      "size": 28646,
+      "sha256": "418688d825f4f452de6151774f489d1a8c7cf4362347434b5af3e96b4c32a55f"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/climate.py",
+      "size": 20680,
+      "sha256": "595c3bc3e68154d52e7a916c8c733c97fc7cc23424fe3711de837e9142887976"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/kelon168_protocol.cpp",
+      "size": 5363,
+      "sha256": "ea8df9f07d88bb374f09416782f4dfb367bc34b9ba21a71fe842d7edd8fbbc0f"
+    },
+    {
+      "path": "AC-Hisense/components/ac_hi/kelon168_protocol.h",
+      "size": 2171,
+      "sha256": "f13b0342d98501f2f597b167b9b1bddea7dab3d0c4adfe94569334c1d4e34813"
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 506,
+      "sha256": "d0884fc41393e1842295afe5d0dbfa1e51c2df2617e62c03cdbb52d8d41e85e3"
+    },
+    {
+      "path": "NOTICE.md",
+      "size": 1018,
+      "sha256": "d02c676496887539964c03399992a78fd11cc6e18fe60d4b9d43400f3a596537"
+    },
+    {
+      "path": "README.md",
+      "size": 20743,
+      "sha256": "56870e29c2f1ddc7ffaed351c10059deee6df559886731b1906b1b39ee2d5306"
+    },
+    {
+      "path": "ballu-bsagi-12hn8.yaml",
+      "size": 1089,
+      "sha256": "1c77113931969337e2acb5e1f3d71dd95d34c0f35bec3d4a9771d6167df8aeda"
+    },
+    {
+      "path": "docs/HOME-ASSISTANT.md",
+      "size": 1771,
+      "sha256": "141d34d7909ff71d40f783d187f9dd9fe2833ce0d00af25a7d6ab2f0e7e13b2f"
+    },
+    {
+      "path": "docs/PROTOCOL.md",
+      "size": 2620,
+      "sha256": "f11f9350d2045ec8c75bb6331e37bef2a5814564372af41b38f6e0473a5652bb"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "size": 1833,
+      "sha256": "009f59bcb689c213808c859685653e94082130d39c71ca2b744f25a885dbbcff"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "size": 1642,
+      "sha256": "a44254a92558d99d10ba9ce16870d56b4c92fded3b675ffd9972c0e2fb10cb6e"
+    },
+    {
+      "path": "patches/upstream-to-production.patch",
+      "size": 1785,
+      "sha256": "d9fe43dc59036ae8e0fdf53550eb6f378ca5a6b2aecca1e60dd734bd65755998"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 18,
+      "sha256": "e58b86499d69c18e6fb9b2074553adfa371ca323380211e7e1eeb92e521a7fca"
+    },
+    {
+      "path": "scripts/build.sh",
+      "size": 341,
+      "sha256": "ceeb0dc90c00cabeac8a48b7575f84d1ac7ea4c0ce3f1e4339584f03e633fd84"
+    },
+    {
+      "path": "scripts/create_ci_secrets.py",
+      "size": 662,
+      "sha256": "d6d3fcab9be018670feeea80088232837a4149444e291fed6d1e65588d43a951"
+    },
+    {
+      "path": "scripts/generate_manifest.py",
+      "size": 1041,
+      "sha256": "ecc42ed14c737e7577ccdf035c3d1129b0cfe9b7aa4b6dfcd47075061851fe49"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "size": 4160,
+      "sha256": "30d9b059609e5f6661c079f48b093f6543fec2b4581770523c6035d41a1bf019"
+    },
+    {
+      "path": "secrets.example.yaml",
+      "size": 323,
+      "sha256": "1b0782eddc68bf602db6d0e7f12e8c3e2054637ae26f05e8a6cb05403af1aa19"
+    }
+  ]
+}
